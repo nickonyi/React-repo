@@ -1,17 +1,15 @@
 export default function TodoList() {
+  const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
+  const description = 'Gregorio Y. Zara';
+  const name = 'George Waluke';
+
+  const formatDate = (date) => {
+    return new Intl.DateTimeFormat('en-us', { weekday: 'long' });
+  };
   return (
     <>
-      <h1>Heddy Lammars Todo</h1>
-      <img
-        src="https://i.imgur.com/yXOvdOSs.jpg"
-        alt="Hedy Lamarr"
-        className="photo"
-      />
-      <ul>
-        <li>Invent new traffic lights</li>
-        <li>Reherse a movie scene</li>
-        <li>Improve the spectrum technology</li>
-      </ul>
+      <h1>{name} To Do List</h1>
+      <img src={avatar} alt={description} className="avatar" />
     </>
   );
 }
