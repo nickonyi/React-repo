@@ -1,15 +1,22 @@
 export default function TodoList() {
-  const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
-  const description = 'Gregorio Y. Zara';
-  const name = 'George Waluke';
-
-  const formatDate = (date) => {
-    return new Intl.DateTimeFormat('en-us', { weekday: 'long' });
+  const person = {
+    name: 'Gregorio y Zara',
+    src: 'https://i.imgur.com/7vQD0fPs.jpg',
+    theme: {
+      backgroundColor: 'black',
+      color: 'pink',
+    },
   };
+
   return (
-    <>
-      <h1>{name} To Do List</h1>
-      <img src={avatar} alt={description} className="avatar" />
-    </>
+    <div style={person.theme}>
+      <h1> {person.name} To do list</h1>
+      <img src={person.src} alt={person.name} className="avatar" />
+      <ul>
+        <li>Improve the videophone</li>
+        <li>Prepare aeronautics lectures</li>
+        <li>Work on the alcohol-fuelled engine</li>
+      </ul>
+    </div>
   );
 }
