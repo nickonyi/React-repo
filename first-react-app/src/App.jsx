@@ -1,31 +1,20 @@
 import './App.css';
 
-function List(props) {
-  if (!props.animals) {
-    return <div>Loading...</div>;
-  }
-
-  if (props.animals.length === 0) {
-    return <div>There are no animals in the list!!</div>;
-  }
-
-  return (
-    <ul>
-      {props.animals.map((animal) => {
-        return <li key={animal}>{animal}</li>;
-      })}
-    </ul>
-  );
+function Item({ name, isPacked }) {
+  return <li className="item">{isPacked ? name + ' ✅' : name}</li>;
 }
 
 function App() {
-  const animals = ['Lion', 'Cow', 'Snake', 'Lizard', 'Leopard'];
-
   return (
-    <>
-      <h1>Animals:</h1>
-      <List animalsList={animals} />
-    </>
+    <section>
+      <h1>Sally ride Packing List</h1>
+      <ul>
+        <Item isPacked={true} name="Space suit" />
+        <Item isPacked={true} name="Helmet with a golden leaf" />
+        <Item isPacked={false} name="Photo of Tam" />
+        <Item isPacked={true} name="Photo of Randioton" />
+      </ul>
+    </section>
   );
 }
 
