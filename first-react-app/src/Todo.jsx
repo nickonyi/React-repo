@@ -15,7 +15,7 @@ export default function TodoList() {
       <ul>
         <li>Improve the videophone</li>
         <li>Prepare aeronautics lectures</li>
-        <li>Work on the alcohol-fuelled engine</li>
+        <li>Work on the alcohol-fueldled engine</li>
       </ul>
     </div>
   );
