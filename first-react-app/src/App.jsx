@@ -1,16 +1,10 @@
 import './App.css';
 
-function ListItem(props) {
-  return <li>{props.animal}</li>;
-}
-
 function List(props) {
   return (
     <ul>
       {props.animalsList.map((animal) => {
-        return animal.startsWith('L') ? (
-          <ListItem key={animal} animal={animal} />
-        ) : null;
+        return animal.startsWith('L') && <li key={animal}>{animal}</li>;
       })}
     </ul>
   );
