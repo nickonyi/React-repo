@@ -1,7 +1,9 @@
 import './App.css';
 
 function Item({ name, isPacked }) {
-  return <li className="item">{isPacked ? name + ' ✅' : name}</li>;
+  return (
+    <li className="item">{isPacked ? <del>{name + ' ✅'}</del> : name}</li>
+  );
 }
 
 function App() {
@@ -12,7 +14,7 @@ function App() {
         <Item isPacked={true} name="Space suit" />
         <Item isPacked={true} name="Helmet with a golden leaf" />
         <Item isPacked={false} name="Photo of Tam" />
-        <Item isPacked={true} name="Photo of Randioton" />
+        <Item isPacked={false} name="Photo of Randioton" />
       </ul>
     </section>
   );
