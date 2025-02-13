@@ -13,7 +13,7 @@ function App() {
       <ul>
         <Item isPacked={true} name="Space suit" />
         <Item isPacked={true} name="Helmet with a golden leaf" />
-        <Item isPacked={false} name="Photo of Tam" />
+        <Item isPacked={false} name="Photo of saaa Tam" />
         <Item isPacked={false} name="Photo of Randioton" />
       </ul>
     </section>
