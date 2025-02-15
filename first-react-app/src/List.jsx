@@ -29,6 +29,7 @@ export default function List() {
   ));
   return (
     <article>
+      <h1>Scientists</h1>
       <h1>Chemists</h1>
       <ul>{chemistGroup}</ul>
       <h1>Everyone else</h1>
