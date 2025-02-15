@@ -7,9 +7,6 @@ export default function List() {
     (person) => person.profession !== 'chemist'
   );
 
-  console.log(chemists);
-  console.log(everyoneElse);
-
   const chemistGroup = chemists.map((person) => (
     <li key={person.id}>
       <img src={getImageUrl(person)} alt={person.name} />
