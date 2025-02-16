@@ -10,7 +10,10 @@ export default function Poem() {
   return (
     <article>
       {poem.lines.map((line, index) => (
-        <p key={index}>{line}</p>
+        <>
+          <p key={index}>{line}</p>
+          <hr />
+        </>
       ))}
     </article>
   );
