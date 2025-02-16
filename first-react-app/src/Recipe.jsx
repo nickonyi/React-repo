@@ -1,8 +1,8 @@
 import { recipes } from './recipedata';
 
-function RecipeComp({ id, name, ingredients }) {
+function RecipeComp({ name, ingredients }) {
   return (
-    <div key={id}>
+    <div>
       <h2>{name}</h2>
       <ul>
         {ingredients.map((ingredient) => (
@@ -19,12 +19,7 @@ export default function RecipeList() {
       <h1>Recipes</h1>
       <ul>
         {recipes.map((recipe) => (
-          <RecipeComp
-            key={recipe.id}
-            id={recipe.id}
-            name={recipe.name}
-            ingredients={recipe.ingredients}
-          />
+          <RecipeComp key={recipe.id} {...recipe} />
         ))}
       </ul>
     </div>
