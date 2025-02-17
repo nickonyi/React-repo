@@ -1,4 +1,4 @@
-import { recipes } from './recipedata';
+import { recipes } from '../recipedata';
 
 function RecipeComp({ name, ingredients }) {
   return (
