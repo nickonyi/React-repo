@@ -1,7 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
-import Poem from './Poem';
+import Profile from './components/Profile';
+//import './index.css';
+//import Poem from './Poem';
 //import RecipeList from './Recipe';
 //import TodoList from './Todo.jsx';
 //import App from './App';
@@ -9,6 +10,6 @@ import Poem from './Poem';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Poem />
+    <Profile />
   </StrictMode>
 );

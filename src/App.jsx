@@ -1,22 +1,21 @@
-import './App.css';
+import './styles/App.css';
 
-function Item({ name, isPacked }) {
-  return (
-    <li className="item">{isPacked ? <del>{name + ' ✅'}</del> : name}</li>
-  );
+function Button(props) {
+  const buttonStyle = {
+    color: props.color,
+    fontSize: props.fontSize + 'px',
+  };
+
+  return <button style={buttonStyle}>{props.text}</button>;
 }
 
 function App() {
   return (
-    <section>
-      <h1>Sally ride Packing List</h1>
-      <ul>
-        <Item isPacked={true} name="Space suit" />
-        <Item isPacked={true} name="Helmet with a golden leaf" />
-        <Item isPacked={false} name="Photo of saaa Tam" />
-        <Item isPacked={false} name="Photo of Randioton" />
-      </ul>
-    </section>
+    <div>
+      <Button text="click me!" color="red" fontSize={12} />
+      <Button text="do not click me!" color="blue" fontSize={20} />
+      <Button text="click me!" color="red" fontSize={12} />
+    </div>
   );
 }
 
