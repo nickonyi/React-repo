@@ -1,7 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import Profile from './components/Profile';
 import './styles/index.css';
+import Gallery from './components/Gallery';
+//import Profile from './components/Profile';
 //import Poem from './Poem';
 //import RecipeList from './Recipe';
 //import TodoList from './Todo.jsx';
@@ -10,6 +11,6 @@ import './styles/index.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Profile />
+    <Gallery />
   </StrictMode>
 );

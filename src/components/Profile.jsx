@@ -1,5 +1,9 @@
 import { getImageUrl } from '../data/utils';
 
+function Card({ children }) {
+  return <div className="card">{children}</div>;
+}
+
 function Avatar({ person, size }) {
   return (
     <img
@@ -15,13 +19,15 @@ function Avatar({ person, size }) {
 function Profile() {
   return (
     <div>
-      <Avatar
-        size={100}
-        person={{
-          name: 'Katsuko Saruhashi',
-          imageId: 'YfeOqp2',
-        }}
-      />
+      <Card>
+        <Avatar
+          size={100}
+          person={{
+            name: 'Katsuko Saruhashi',
+            imageId: 'YfeOqp2',
+          }}
+        />
+      </Card>
       <Avatar
         size={80}
         person={{
