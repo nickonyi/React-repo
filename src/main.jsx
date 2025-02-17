@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import Profile from './components/Profile';
-//import './index.css';
+import './styles/index.css';
 //import Poem from './Poem';
 //import RecipeList from './Recipe';
 //import TodoList from './Todo.jsx';
