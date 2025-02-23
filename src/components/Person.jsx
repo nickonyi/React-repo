@@ -12,7 +12,7 @@ export function Person() {
     <>
       <h1>{person.name}</h1>
       <h2>{person.age}</h2>
-      <button onClick={handleIncreaseAge}>Increase age</button>
+      <button onClick={handleIncreaseAge}>Increase aage</button>
     </>
   );
 }
