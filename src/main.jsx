@@ -9,10 +9,11 @@ import './styles/index.css';
 //import TodoList from './Todo.jsx';
 //import App from './App';
 //import List from './List';
-import TravelPlan from './components/TravelPlan';
+//import TravelPlan from './components/TravelPlan';
+import Accordion from './components/Accordion';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <TravelPlan />
+    <Accordion />
   </StrictMode>
 );
