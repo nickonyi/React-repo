@@ -9,16 +9,43 @@ const initialItems = [
   { id: 2, title: 'Watercolors', packed: false },
 ];
 
-const handleAddItem = () => {};
-
 export default function TravelPlan() {
   const [items, setItems] = useState(initialItems);
-  let total = initialItems.length;
-  let packed = initialItems.filter((item) => item.packed).length;
+  let total = items.length;
+  let packed = items.filter((item) => item.packed).length;
+
+  const handleAddItem = (title) => {
+    setItems([...items, { id: nextId++, title: title, packed: false }]);
+  };
+  const handleChangeItem = (nextItem) => {
+    console.log(items);
+
+    setItems(
+      items.map((item) => {
+        if (item.id === nextItem.id) {
+          return nextItem;
+        } else {
+          return item;
+        }
+      })
+    );
+  };
+  const handleDeleteItem = (itemId) => {
+    setItems(items.filter((item) => item.id !== itemId));
+  };
 
   return (
     <>
       <AddItem onAddItem={handleAddItem} />
+      <PackingList
+        items={items}
+        onChangeItem={handleChangeItem}
+        onDeleteItem={handleDeleteItem}
+      />
+      <hr />
+      <b>
+        {packed} out of {total} packed!
+      </b>
     </>
   );
 }
