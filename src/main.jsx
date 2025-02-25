@@ -10,10 +10,11 @@ import './styles/index.css';
 //import App from './App';
 //import List from './List';
 //import TravelPlan from './components/TravelPlan';
-import Accordion from './components/Accordion';
+//import Accordion from './components/Accordion';
+import SyncedInputs from './components/Input';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Accordion />
+    <SyncedInputs />
   </StrictMode>
 );
