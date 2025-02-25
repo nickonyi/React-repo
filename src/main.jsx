@@ -11,10 +11,11 @@ import './styles/index.css';
 //import List from './List';
 //import TravelPlan from './components/TravelPlan';
 //import Accordion from './components/Accordion';
-import SyncedInputs from './components/Input';
+//import SyncedInputs from './components/Input';
+import { FilterableList } from './components/FilterableList';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <SyncedInputs />
+    <FilterableList />
   </StrictMode>
 );
