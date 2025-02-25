@@ -2,22 +2,23 @@ import { useState } from 'react';
 import { filterItems, foods } from '../data/searchdata';
 
 export function FilterableList() {
-  return (
-    <>
-      <SearchBar />
-      <hr />
-      <List items={foods} />
-    </>
-  );
-}
-
-function SearchBar() {
   const [query, setQuery] = useState('');
+  const results = filterItems(foods, query);
 
   function handleChange(e) {
     setQuery(e.target.value);
   }
 
+  return (
+    <>
+      <SearchBar query={query} handleChange={handleChange} />
+      <hr />
+      <List items={results} />
+    </>
+  );
+}
+
+function SearchBar({ query, handleChange }) {
   return (
     <label>
       Search: <input value={query} onChange={handleChange} />
