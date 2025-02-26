@@ -12,10 +12,11 @@ import './styles/index.css';
 //import TravelPlan from './components/TravelPlan';
 //import Accordion from './components/Accordion';
 //import SyncedInputs from './components/Input';
-import { FilterableList } from './components/FilterableList';
+//import { FilterableList } from './components/FilterableList';
+import Menu from './components/Menu';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <FilterableList />
+    <Menu />
   </StrictMode>
 );
