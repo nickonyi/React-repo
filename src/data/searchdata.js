@@ -37,4 +37,10 @@ export const foods = [
     description:
       'Dim sum is a large range of small dishes that Cantonese people traditionally enjoy in restaurants for breakfast and lunch',
   },
+  {
+    id: 5,
+    name: 'Juman Juu',
+    description:
+      'Juman juu is a large range of small dishes that Cantonese people traditionally enjoy in restaurants for breakfast and lunch',
+  },
 ];
