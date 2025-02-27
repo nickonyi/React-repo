@@ -9,9 +9,10 @@ export default function Clock (){
         },1000);
 
         return ()=> {
-            clearInterval(key);
+            clearInterval(key)
         }
-    },[])
+
+},[])
   
 
     return (
