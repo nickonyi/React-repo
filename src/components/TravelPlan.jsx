@@ -11,15 +11,21 @@ const initialItems = [
 
 export default function TravelPlan() {
   const [items, setItems] = useState(initialItems);
-  let total = items.length;
-  let packed = items.filter((item) => item.packed).length;
+  const total = items.length;
+  const packed = items.filter((item) => item.packed).length;
 
-  const handleAddItem = (title) => {
-    setItems([...items, { id: nextId++, title: title, packed: false }]);
-  };
-  const handleChangeItem = (nextItem) => {
-    console.log(items);
+  function handleAddItem(title) {
+    setItems([
+      ...items,
+      {
+        id: nextId++,
+        title: title,
+        packed: false,
+      },
+    ]);
+  }
 
+  function handleChangeItem(nextItem) {
     setItems(
       items.map((item) => {
         if (item.id === nextItem.id) {
@@ -29,10 +35,11 @@ export default function TravelPlan() {
         }
       })
     );
-  };
-  const handleDeleteItem = (itemId) => {
+  }
+
+  function handleDeleteItem(itemId) {
     setItems(items.filter((item) => item.id !== itemId));
-  };
+  }
 
   return (
     <>
