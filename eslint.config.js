@@ -29,7 +29,7 @@ export default [
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       'react/prop-types': 'off',
-      'react/no-unescaped-entities': 'Off',
+      'react/no-unescaped-entities': 'off',
       'jsx-quotes': 'off',
       'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': [
