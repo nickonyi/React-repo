@@ -15,10 +15,11 @@ import './styles/index.css';
 //import { FilterableList } from './components/FilterableList';
 //import Menu from './components/Menu';
 //import TravelItinary from './components/TravelItinary';
-import Clock from './components/Clock';
+//import Clock from './components/Clock';
+import App from './components/App';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Clock />
+    <App />
   </StrictMode>
 );
