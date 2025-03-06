@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import ChatRoom from './ChatRoom';
+import {
+  createEncryptedConnection,
+  createUnencryptedConnection,
+} from '../data/chat';
 
 export default function App() {
   const [roomId, setRoomId] = useState('general');
-  const [show, setShow] = useState(false);
+  const [isEncypted, setIsencrypted] = useState(false);
 
   return (
     <>
@@ -15,11 +19,20 @@ export default function App() {
           <option value="music">music</option>
         </select>
       </label>
-      <button onClick={() => setShow(!show)}>
-        {show ? 'Close chat' : 'Open chat'}
-      </button>
-      {show && <hr />}
-      {show && <ChatRoom roomId={roomId} />}
+      <label>
+        <input
+          type="checkbox"
+          checked={isEncypted}
+          onChange={(e) => setIsencrypted(e.target.value)}
+        />
+      </label>
+      <hr />
+      <ChatRoom
+        roomId={roomId}
+        createConnection={
+          isEncypted ? createEncryptedConnection : createUnencryptedConnection
+        }
+      />
     </>
   );
 }
