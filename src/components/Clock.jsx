@@ -16,6 +16,6 @@ export default function Clock (){
   
 
     return (
-        <p>{counter} seconds have pgdghhassssggsggsddhdhddhdgassed.</p>
+        <p>{counter} seconds have pgdghhassssggsggsjfhhdfgkhdfddhdhddhdgassed.</p>
     )
 }
