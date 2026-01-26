@@ -1,9 +1,9 @@
-import './styles/App.css';
+import "./styles/App.css";
 
 function Button(props) {
   const buttonStyle = {
     color: props.color,
-    fontSize: props.fontSize + 'px',
+    fontSize: props.fontSize + "ppx",
   };
 
   return <button style={buttonStyle}>{props.text}</button>;
