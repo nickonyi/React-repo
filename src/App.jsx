@@ -1,31 +1,20 @@
-//import "./App.css";
+import { Link } from "react-router";
 
-function List(props) {
-  if (!props.animals) {
-    return <h1>Loading....</h1>;
-  }
-
-  if (props.animals.length === 0) {
-    return <div>There are no animals in the list!</div>;
-  }
-
-  return (
-    <ul>
-      {props.animals.map((animal) => {
-        return <li key={animal}>{animal}</li>;
-      })}
-    </ul>
-  );
-}
-
-function App() {
-  const animals = [];
+const App = () => {
   return (
     <div>
-      <h1>Animals</h1>
-      <List animals={animals} />
+      <h1>Hello from the main page of the app!</h1>
+      <p>Here are some examples of links to other pages</p>
+      <nav>
+        <ul>
+          <li>
+            <Link to="profile">Profile page</Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
-}
+};
 
 export default App;
+
